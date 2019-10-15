@@ -1,19 +1,36 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-    <h1>Hello world!!</h1>
-        
-        <script src="" async defer></script>
-    </body>
+<!doctype html>
+<html lang="en" ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+    <!-- Angular.js -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <!-- App -->
+    <script defer src="scripts/app.js" ></script>
+  </head>
+<body ng-controller="LunchCheckController"> 
+   <div class="container">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+           <!-- Empty items are not considered towards the count -->
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control"
+             ng-model="dishList">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="displayLunchCheckMessage()">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <p>{{lunchCheckMessage}}</p>
+         </div>
+   </div>
+
+</body>
 </html>
