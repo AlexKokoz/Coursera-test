@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- AngularJS -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"> </script>
+    <!-- UI-Router -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.23/angular-ui-router.min.js"> </script>
+    <!-- Modules -->
+    <script defer src="scripts/modules/menuapp.module.js"></script>
+    <script defer src="scripts/modules/data.module.js"></script>
+    <!-- Services -->
+    <script defer src="scripts/services/menudata.service.js"></script>
+    <!-- Components -->
+    <script defer src="scripts/components/categories.component.js"></script>
+    <!-- Routes -->
+    <script defer src="scripts/routes/routes.js"></script>
+    <!-- Controllers -->
+    <script defer src="scripts/controllers/category.controller.js"></script>
+    <script defer src="scripts/controllers/item.controller.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to our Restaurant</h1>
+    </header>
+    <main>
+        <ui-view></ui-view>
+    </main>
+
+
+</body>
+
+</html>
